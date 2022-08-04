@@ -16,7 +16,7 @@ import java.io.IOException;
 @RequiredArgsConstructor
 public class JwtFilter extends OncePerRequestFilter {
 
-    public static final String ACCESS_HEADER = "Access-Token";
+    public static final String ACCESS_HEADER = "Authorization";
     public static final String REFRESH_HEADER = "Refresh-Token";
     public static final String BEARER_PREFIX = "Bearer ";
 

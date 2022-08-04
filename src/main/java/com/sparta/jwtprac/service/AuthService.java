@@ -61,7 +61,7 @@ public class AuthService {
 
         refreshTokenRepository.save(refreshToken);
         // 5. 토큰 발급
-        response.setHeader("Access-Token",tokenDto.getAccessToken());
+        response.setHeader("Authorization","Bearer " + tokenDto.getAccessToken());
         response.setHeader("Refresh-Token",tokenDto.getRefreshToken());
 
         return memberRepository.findByNickname(memberRequestDto.getNickname())
